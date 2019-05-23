@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MVVMandDataBinding" x:Class="MVVMandDataBinding.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"> </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout Spacing="10" Padding="10,20,10,0">
+        <Label Text="Name"/>
+        <Entry Text="{Binding Name}" FontSize="15" TextColor="Gray" Placeholder="Full Name" />
+        
+        <Label Text="Website"/>
+        <Entry Text="{Binding Website}"  FontSize="15" TextColor="Gray" Placeholder="Website"/>
+        
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Best Friend"/>
+            <Switch IsToggled="{Binding BestFriend}"/>
+        </StackLayout>
+        
+        <Label Text="{Binding DisplayMessage}"  FontSize="15" TextColor="Gray"/>
+        
+        <Button Text="Open Website" Command="{Binding LaunchWebsiteCommand}"/>
+        <Button Text="Save Contact" Command="{Binding SaveContactCommand}"/>
+        
+        <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+    </StackLayout>
+</ContentPage>
