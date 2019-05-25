@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:XamarinFormBehavior"
+    x:Class="XamarinFormBehavior.MainPage">
+<StackLayout Padding="5,50,5,0">
+        <Label Text="Pick a background color" HorizontalOptions="Center"/>
+        <Picker x:Name="ColorPicker">
+            <Picker.Behaviors>
+                <local:BackgroundColorChangeBehavior />
+            </Picker.Behaviors>
+        </Picker>
+    </StackLayout>
+</ContentPage>
