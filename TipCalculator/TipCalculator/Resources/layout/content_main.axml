@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	tools:showIn="@layout/activity_main"
+	android:orientation="vertical">
+
+	<EditText
+		android:layout_width="match_parent"
+        android:id="@+id/inputBill"
+		android:layout_height="wrap_content" />
+
+	<Button
+		android:layout_width="match_parent"
+        android:id="@+id/calculateButton"
+		android:layout_height="wrap_content"
+		android:text="CALCULATE" />
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="23.0dp"
+		android:layout_marginBottom="11.5dp">
+		<TextView
+			android:layout_width="62.0dp"
+			android:layout_height="match_parent"
+			android:text="Tip:" />
+		<TextView
+			android:layout_width="wrap_content"
+            android:id="@+id/outputTip"
+			android:layout_height="match_parent"/>
+    </LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25dp"
+		android:minHeight="25dp"
+		android:layout_width="match_parent"
+		android:layout_height="24.0dp">
+        <TextView
+			android:layout_width="68.0dp"
+			android:layout_height="match_parent"
+			android:text="Total:" />
+		<TextView
+			android:layout_width="wrap_content"
+             android:id="@+id/outputTotal"
+			android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>
